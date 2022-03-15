@@ -5,46 +5,49 @@ public class Calculator {
     private int num2;
     private String operator;
 
-    // Constructor to initialize the calculator
+    
     public Calculator() {
-        // Get user input
-        Scanner scan Calc = new Scanner(System.in);
+        
+        Scanner scan = new Scanner(System.in);
        
 	 System.out.println("Enter the first number: ");
 	   num1 = scan.nextInt();
-	  	scan.nextLine()
+	  	scan.nextLine();
 	System.out.println("Enter the operator: ");
 	   operator = scan.nextLine();
 
 	System.out.println("Enter the second number: ");
-	   num2 = scan.nextInt() 
+	   num2 = scan.nextInt();
 	   
 
-        // Decide on the operation to perform 
+         
         switch(operator){
-	case "+" : add(num1, num2);
+	case "+" : System.out.println(add(num1, num2));
 		break;
-	case "-" :substract(num1, num2);
+	case "-" :System.out.println(substract(num1, num2));
 		break;
-	case "x" :multiply(num1, num2);
+	case "x" :System.out.println(multiply(num1, num2));
 		break;
-	case "/" :divide(num1, num2);
+	case "/" :System.out.println(divide(num1, num2));
 		break;
-    }
+    }}
 
     public String add(int a, int b) {
-        return  a + "+" + b " = "  + (a+b);
+        String x = a + "+" + b + " = "  + (a+b);
+        return x;
     }
 
-    public String subtract(int a, int b) {
-        return a + "-" + b + = + (a-b);
+    public String substract(int a, int b) {
+        String x =a + "-" + b + " = " +(a-b);
+		return x ;
     }
 
     public String multiply(int a, int b) {
-        return a +" x " + b = + (a*b);
+        String x =a +" x " + b + "=" + (a*b);
+		return x ;
     }
 
     public String divide(int a, int b) {
-        return a + " / " + b  + =  + (a/b);
-    }
-}
+        String x = a + " / " + b  + "= "+ (a/b);
+    return x ;
+}}
